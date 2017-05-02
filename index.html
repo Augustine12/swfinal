@@ -1,0 +1,331 @@
+<html>
+<head>
+<title>"Eliòe Augustine"</title>
+
+  <meta charset="UTF-8">
+  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+  <!-- uncomment lines below to include extra p5 libraries -->
+  <!--<script language="javascript" src="libraries/p5.dom.js"></script>-->
+  <!--<script language="javascript" src="libraries/p5.sound.js"></script>-->
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+  <!-- this line removes any default padding and style. you might only need one of these values set. -->
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Paaji|Dancing+Script|Gravitas+One|Gruppo|Herr+Von+Muellerhoff|Homemade+Apple|Julius+Sans+One|League+Script|Mallanna|Slabo+27px|Trirong" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+
+ hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+} 
+  .show img{float: left;
+    margin: 10px;
+
+  }
+  .show, h4, p{
+       color: black;
+      font-family: 'Mallanna', sans-serif;
+      font-size: 12px;
+      text-align: left;
+      font-weight: normal;
+      padding-right: 60px;
+     }
+
+    div body, h4, p{
+      color: black;
+      font-family: 'Mallanna', sans-serif;
+      font-size: 12px;
+      text-align: left;
+      font-weight: bold;
+     
+      
+    } 
+ 
+	  
+	  .sidebar{
+		   color:#f821f8;
+        background: #e5e4e5;
+        padding: 10px;
+	  }
+	  
+	  
+	  
+	  h3{
+		   font-family: 'League Script', cursive; 
+		  font-weight: lighter; 
+		  padding-top: 5px;
+		  padding-bottom: none;
+		  margin: 0px;
+		  text-align: center;
+		  color:#f821f8;
+		  font-size: 30px;
+		  
+	  }
+	 
+	   h2{
+		font-weight: lighter;   
+        text-align: center;
+        font-size: 90px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		margin: 0px;
+        font-family: 'League Script', cursive;  
+    }
+
+    /*font-family: 'Baloo Paaji', cursive;
+
+font-family: 'Trirong', serif;
+font-family: 'Gruppo', cursive;
+font-family: 'Mallanna', sans-serif;
+	  font-family: 'Dancing Script', cursive;
+font-family: 'League Script', cursive;
+font-family: 'Homemade Apple', cursive;
+font-family: 'Julius Sans One', sans-serif;
+font-family: 'Baloo Paaji', cursive;
+font-family: 'Herr Von Muellerhoff', cursive;
+font-family: 'Gravitas One', cursive;*/
+    
+  ul {
+   display: inline-block;
+ width: 96%;
+  list-style-type: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: #8b8e8b;
+   font-family: 'Mallanna', sans-serif;
+}
+
+li {
+    float: left;
+    margin: auto;
+
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+li a:hover {
+    background-color: #2121f8;
+} 
+  
+div.center {
+          margin: auto;
+          width: 82%;
+          color:#f821f8;
+          
+         
+}
+    
+.sidebar img {
+    display: block;
+    margin: auto;
+    width: 40%;
+	
+  
+}
+    
+     .footer {
+		 font-family: 'League Script', cursive; 
+     margin: 0px;
+     color:#f821f8;
+     background-color: #8b8e8b;
+     width: 96%;
+         
+		 text-align: center;
+		 font-weight: bold;
+		 font-size: 20px;
+ }
+      
+      
+    table,  td {
+    border: 1px solid #8b8e8b;
+
+   }
+
+
+      
+  th {
+      vertical-align: baseline;
+      padding: 5px;
+      text-align: left;
+      color:#f821f8;
+    
+} 
+      
+  th {
+  text-align: left;
+  padding: 1px;
+  clear: both;
+
+
+    
+} 
+	   th {
+  text-align: left;
+  padding-top: 5px; 		   
+  clear: both;
+    
+} 
+    
+	  #sketch-holder{      
+        margin: auto;
+        
+        
+    }
+
+    .container {
+  position: relative;
+  width: 50%;
+  margin: auto;
+   background: #e5e4e5;
+}
+
+
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: #2121f8;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  width: 100%;
+  left: 0;
+  align-content: center;
+
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+   margin: auto;
+  
+}
+.text {
+  font-family: 'Mallanna', sans-serif; 
+  white-space: nowrap; 
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted #8e8b8e;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #f821f8;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+ </style>
+</head>
+
+<body>
+	<div class="center">
+  <div class="tooltip">Make me a banner!
+  <span class="tooltiptext">Drag mouse and click<br>Thanks!</span>
+</div>
+
+    <div id="sketch-holder">
+      <!-- Our sketch will go here! -->
+    </div>
+<h2>Eliòe Augustine</h2>
+<i class="fa fa-github-alt" aria-hidden="true" style="font-size:24px" padding-bottom:10px;></i>
+<i class="fa fa-pinterest" aria-hidden="true" style="font-size:24px" padding-bottom:10px;></i>
+<i class="fa fa-instagram" aria-hidden="true" style="font-size:24px" padding-bottom:10px;></i>
+
+<div class="stop">
+ <ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+</div>
+<table>
+  <col width="800">
+  <col width="300">
+  <tr>
+     
+    <th> <div class='show'>
+       <p><img src="images/abstinete.png" alt="Augustine" style="width:130px;height:140px;"><h4>Kindness</h4>“My wish for you is that you continue. Continue to be who and how you are, to astonish a mean world with your acts of kindness. Continue to allow humor to lighten the burden of your tender heart.”<br>
+       ― Maya Angelou</p>
+       <br>
+       <br>
+       <hr>
+       <p><img src="images/aristocat.png" alt="Augustine" style="width:130px;height:140px;"><h4>Compassion</h4>“You may not control all the events that happen to you, but you can decide not to be reduced by them. Try to be a rainbow in someone's cloud. Do not complain. Make every effort to change things you do not like. If you cannot make a change, change the way you have been thinking. You might find a new solution.” <br>
+       ― Maya Angelou</p>
+       <br>
+       <br>
+       <hr>
+       <p><img src="images/yellow.png" alt="Augustine" style="width:130px;height:140px;"><h4>Graditude</h4>“Each of us has the right and the responsibility to assess the roads which lie ahead, and those over which we have traveled, and if the future road looms ominous or unpromising, and the roads back uninviting, then we need to gather our resolve and, carrying only the necessary baggage, step off that road into another direction. If the new choice is also unpalatable, without embarrassment, we must be ready to change that as well.”<br>
+       ― Maya Angelou 
+       </p></th></div>
+
+      <th>
+      <div class='sidebar'>
+		  <h3>Manifesto</h3>
+      <div class="container">
+      <img src="images/Augustine.jpg" alt="Augustine" style="width:125px; height:130px;" class="image">
+      <div class="overlay">
+      <div class="text">Eliòe Augustine</div>
+      </div>
+      </div>
+
+      <p>As an artist, I have always been intrigued by virtues; in particular, how they intertwine <br>within human society.</p>
+			  <h5>Kindness</h5>
+			  <h5>Compassion</h5>
+			  <h5>Graditude</h5>
+			  <p>I go about life collecting lists of kindness and compassion, so... I can make a bigger list for Gratitude.</p>
+			  <p>Gradtitude propels me to give and live freely. Giving and living freeely allows me to own <br>who I am and what I create! </p>
+			  </div>
+		  
+      </th>
+      </table>
+      <div class='footer'>
+      <i class="fa fa-github-alt" aria-hidden="true" style="font-size:24px" padding-bottom:10px;>
+      </i>
+<i class="fa fa-pinterest" aria-hidden="true" style="font-size:24px" padding-bottom:10px;></i>
+<i class="fa fa-instagram" aria-hidden="true" style="font-size:24px" padding-bottom:10px;></i></div>   
+      </div>
+ 		
+</body>
+</html>
